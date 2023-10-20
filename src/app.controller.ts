@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get(':id')
-  getHelloById(@Param('id') id: string): string {
+  getHelloById(@Param('id') id: number): string {
     return this.appService.getHelloById(id);
   }
 }

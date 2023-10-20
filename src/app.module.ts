@@ -7,7 +7,7 @@ import { Book } from './books/entities/book.entity';
 
 @Module({
   imports: [BooksModule, TypeOrmModule.forRoot({
-    type: 'mariadb',
+    type: 'mysql',
     host: 'localhost',
     port: 3306,
     username: 'root',

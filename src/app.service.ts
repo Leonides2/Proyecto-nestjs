@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getHelloById(id: string): string{
+  getHelloById(id: number): string{
 
     return 'Hola y adios ' + id;
 
