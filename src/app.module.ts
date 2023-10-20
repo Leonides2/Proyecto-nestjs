@@ -3,12 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BooksModule } from './books/books.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
-@Module({
-  imports: [BooksModule, TypeOrmModule],
-  controllers: [AppController],
-  providers: [AppService],
-})
+import { Book } from './books/entities/book.entity';
 
 @Module({
   imports: [BooksModule, TypeOrmModule.forRoot({
@@ -18,6 +13,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     username: 'root',
     password: '',
     database: 'soporte',
+    entities:[Book],
+    autoLoadEntities: true,
+    synchronize: true
   })],
   controllers: [AppController],
   providers: [AppService],
