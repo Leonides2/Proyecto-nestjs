@@ -10,6 +10,8 @@ export class Student {
     name: string
     @Column()
     lastName : string
+    @Column()
+    Grado: string
 
     @ManyToMany(()=> Course, (course) => course.students)
     @JoinTable()
