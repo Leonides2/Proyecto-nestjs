@@ -11,7 +11,7 @@ export class Student {
     @Column()
     lastName : string
 
-    @ManyToMany(()=> Course)
+    @ManyToMany(()=> Course, (course) => course.students)
     @JoinTable()
     courses : Course[]
 }

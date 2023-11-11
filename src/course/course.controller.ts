@@ -22,7 +22,7 @@ export class CourseController {
     return this.courseService.findOne(+id);
   }
 
-  @Put()
+  @Put(':id')
   update(@Param('id') id : string, @Body() updateCourseDto : UpdateCourseDto){
     return this.courseService.update(+id, updateCourseDto)
   }
